@@ -1,14 +1,14 @@
 import React from "react";
 
 export default function Card(props) {
-    console.log(props)
   let badgeText;
+  
   if (props.openSpots === 0) {
     badgeText = "SOLD OUT";
   } else if (props.location === "Online") {
     badgeText = "ONLINE";
   }
-  console.log()
+
   return (
     <div className="card">
       {badgeText && <div className="card__badge">{badgeText}</div>}
