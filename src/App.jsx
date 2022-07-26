@@ -6,17 +6,12 @@ import data from "./data";
 
 export default function App() {
   const cards = data.map((item) => {
-    return (
-      <Card
-        key={item.id}
-        {...item}
-      />
-    );
+    return <Card key={item.id} {...item} />;
   });
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero title="Online Experiences" />
       <section className="cards-lists">{cards}</section>
     </>
   );
